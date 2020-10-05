@@ -22,9 +22,9 @@ setup(
     'flax',
   ],
   classifiers=[
-    'Development Status :: 1 - Beta',
+    'Development Status :: 4 - Beta',
     'Intended Audience :: Developers',
-    'Topic :: Scientific/Engineering :: Computer Vision',
+    'Topic :: Scientific/Engineering :: Artificial Intelligence',
     'License :: OSI Approved :: MIT License',
     'Programming Language :: Python :: 3.6',
   ],
