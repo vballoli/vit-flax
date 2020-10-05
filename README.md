@@ -23,4 +23,4 @@ img = jax.random.uniform(rng, (1,256,256,3))
 output = model(img)
 ```
 
-Note: This repository is still in initial stages. Feel free to [Contact me] or raise issues/PR for suggestions, improvements or bugs.
+Note: This repository is still in initial stages. Feel free to [Contact me](https://vballoli.github.io) or raise issues/PR for suggestions, improvements or bugs.
