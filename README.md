@@ -2,9 +2,11 @@
 
 This repository implements Vision Trasnformer(ViT) in Flax, introduced in an [ICLR paper 2021 submission](https://openreview.net/pdf?id=YicbFdNTTy), with further explanation by [Yannic Kilcher](https://www.youtube.com/watch?v=TrdevFK_am4). This repository is heavily inspired from [lucidrain's](https://github.com/lucidrains/vit-pytorch) implementation.
 
+# Install
+`pip install vit-flax`
+
 # Usage
 ```python
-import numpy as np
 import jax
 from jax import numpy as jnp
 from flax import nn
@@ -20,3 +22,5 @@ model = nn.Model(module, initial_params)
 img = jax.random.uniform(rng, (1,256,256,3))
 output = model(img)
 ```
+
+Note: This repository is still in initial stages. Feel free to [Contact me] or raise issues/PR for suggestions, improvements or bugs.
