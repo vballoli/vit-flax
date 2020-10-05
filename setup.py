@@ -18,7 +18,7 @@ setup(
   ],
   install_requires=[
     'jax',
-    'jaxlib'
+    'jaxlib',
     'flax',
   ],
   classifiers=[
