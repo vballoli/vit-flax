@@ -1,0 +1,1 @@
+This repository requires some significant edits for high efficiency and results on smaller scale experiments. If you're interested and/or have the resources to run experiments, feel free to raise issues and PR and we can collaborate to work on them together. [See here](https://vballoli.github.io) for contact details.
