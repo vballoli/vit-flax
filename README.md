@@ -1,4 +1,4 @@
-# Vision Transformer in Flax
+# Vision Transformer in JAX/Flax
 
 This repository implements Vision Trasnformer(ViT) in Flax, introduced in an [ICLR paper 2021 submission](https://openreview.net/pdf?id=YicbFdNTTy), with further explanation by [Yannic Kilcher](https://www.youtube.com/watch?v=TrdevFK_am4). This repository is heavily inspired from [lucidrain's](https://github.com/lucidrains/vit-pytorch) implementation.
 
