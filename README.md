@@ -24,3 +24,7 @@ output = model(img)
 ```
 
 Note: This repository is still in initial stages. Feel free to [Contact me](https://vballoli.github.io) or raise issues/PR for suggestions, improvements or bugs.
+
+# Help needed
+
+A recent commit introduces code for training CIFAR models in the `examples` directory. If you're using this code and have the resources to run, I'd be happy to include those reports here and give appropriate credits for the same.
