@@ -23,14 +23,21 @@ class Residual(nn.Module):
 
 
 class PreNorm(nn.Module):
-  """Apply function to norm
+  """Apply function to a normalized modulue
   """
   def apply(self, x, norm, fn):
     return fn(norm(x))
 
 
 class Transformer(nn.Module):
-  """Simple implementation of a Transformer
+  """A simple implementation of a Transformer
+
+  :param x: Input tensor.
+  :param depth: Number of layers of Residual-normalized attention layers.
+  :param num_heads: Number of attention heads
+  :param feed_forward_dim: FC dimension
+
+  :return: Transformer output embedding
   """
   def apply(self, x, depth, num_heads, feed_forward_dim_1):
     attention = nn.SelfAttention.partial(num_heads=num_heads)
