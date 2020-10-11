@@ -26,7 +26,7 @@ class ViT(nn.Module):
     x = Transformer(x, depth, num_heads, dense_dims[0])
 
     x = x[:, 0]
-    x = nn.Dense(x, dense_dims[0])
+    x = nn.Dense(x, dense_dims[1])
     x = nn.gelu(x)
     x = nn.Dense(x, num_classes)
     return x
