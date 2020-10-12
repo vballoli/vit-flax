@@ -3,15 +3,17 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Vision Transformers in JAX/Flax(ViT-Flax)'s documentation!
+Vision Transformers in JAX/Flax(ViT-Flax)'s documentation!
 =====================================================================
+
+Vision Transformers(ViT) in JAX/Flax is a re-implementation of the paper "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: API reference
 
    vit_flax.layers
