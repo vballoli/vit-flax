@@ -23,7 +23,13 @@ img = jax.random.uniform(rng, (1,256,256,3))
 output = model(img)
 ```
 
-Note: This repository is still in initial stages. Feel free to [Contact me](https://vballoli.github.io) or raise issues/PR for suggestions, improvements or bugs.
+`examples` directory contains code to train ViT on CIFAR datasets.
+# Docs and references
+
+Documentation for all the modules can be viewed [here](https://vit-flax.readthedocs.io/en/main/).
+
+# Note
+This repository is still in initial stages. Feel free to [Contact me](https://vballoli.github.io) or raise issues/PR for suggestions, improvements or bugs.
 
 # Help needed
 
