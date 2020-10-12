@@ -16,6 +16,7 @@ Vision Transformers(ViT) in JAX/Flax is a re-implementation of the paper "An Ima
    :maxdepth: 1
    :caption: API reference
 
+   vit_flax
    vit_flax.layers
    vit_flax.vit
 
