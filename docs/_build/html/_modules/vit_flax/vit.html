@@ -148,7 +148,7 @@
 <span class="kn">from</span> <span class="nn">jax</span> <span class="k">import</span> <span class="n">lax</span>
 
 
-<div class="viewcode-block" id="ViT"><a class="viewcode-back" href="../../vit_flax.html#vit_flax.vit.ViT">[docs]</a><span class="k">class</span> <span class="nc">ViT</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="ViT"><a class="viewcode-back" href="../../source/vit_flax.html#vit_flax.vit.ViT">[docs]</a><span class="k">class</span> <span class="nc">ViT</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
   <span class="sd">&quot;&quot;&quot;Vision transformer</span>
 
 <span class="sd">  :param x: Input tensor image</span>
@@ -163,7 +163,7 @@
 
 <span class="sd">  :return:Classification output</span>
 <span class="sd">  &quot;&quot;&quot;</span>
-<div class="viewcode-block" id="ViT.apply"><a class="viewcode-back" href="../../vit_flax.html#vit_flax.vit.ViT.apply">[docs]</a>  <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span>
+<div class="viewcode-block" id="ViT.apply"><a class="viewcode-back" href="../../source/vit_flax.html#vit_flax.vit.ViT.apply">[docs]</a>  <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span>
             <span class="n">patch_size</span><span class="p">,</span> <span class="n">dim</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">num_heads</span><span class="p">,</span> <span class="n">dense_dims</span><span class="p">,</span>
             <span class="n">img_size</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">,</span>
             <span class="n">initializer</span><span class="o">=</span><span class="n">nn</span><span class="o">.</span><span class="n">initializers</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">stddev</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)):</span>

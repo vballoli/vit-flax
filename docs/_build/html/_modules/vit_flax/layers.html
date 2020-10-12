@@ -145,12 +145,12 @@
 <span></span><span class="kn">from</span> <span class="nn">flax</span> <span class="k">import</span> <span class="n">nn</span>
 
 
-<div class="viewcode-block" id="FeedForward"><a class="viewcode-back" href="../../vit_flax.html#vit_flax.layers.FeedForward">[docs]</a><span class="k">class</span> <span class="nc">FeedForward</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="FeedForward"><a class="viewcode-back" href="../../source/vit_flax.html#vit_flax.layers.FeedForward">[docs]</a><span class="k">class</span> <span class="nc">FeedForward</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
   <span class="sd">&quot;&quot;&quot;Simple FeedForward module</span>
 
 <span class="sd">  x -&gt; Dense(x, latent_dim) -&gt; GeLU -&gt; Dense(x, original_dim)</span>
 <span class="sd">  &quot;&quot;&quot;</span>
-<div class="viewcode-block" id="FeedForward.apply"><a class="viewcode-back" href="../../vit_flax.html#vit_flax.layers.FeedForward.apply">[docs]</a>  <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">latent_dim</span><span class="p">):</span>
+<div class="viewcode-block" id="FeedForward.apply"><a class="viewcode-back" href="../../source/vit_flax.html#vit_flax.layers.FeedForward.apply">[docs]</a>  <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">latent_dim</span><span class="p">):</span>
     <span class="n">dim</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">latent_dim</span><span class="p">)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">gelu</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -158,22 +158,22 @@
     <span class="k">return</span> <span class="n">x</span></div></div>
 
 
-<div class="viewcode-block" id="Residual"><a class="viewcode-back" href="../../vit_flax.html#vit_flax.layers.Residual">[docs]</a><span class="k">class</span> <span class="nc">Residual</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="Residual"><a class="viewcode-back" href="../../source/vit_flax.html#vit_flax.layers.Residual">[docs]</a><span class="k">class</span> <span class="nc">Residual</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
   <span class="sd">&quot;&quot;&quot;Simple residual function</span>
 
 <span class="sd">  x -&gt; fn(x) + x&quot;&quot;&quot;</span>
-<div class="viewcode-block" id="Residual.apply"><a class="viewcode-back" href="../../vit_flax.html#vit_flax.layers.Residual.apply">[docs]</a>  <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">residual_fn</span><span class="p">):</span>
+<div class="viewcode-block" id="Residual.apply"><a class="viewcode-back" href="../../source/vit_flax.html#vit_flax.layers.Residual.apply">[docs]</a>  <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">residual_fn</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">residual_fn</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">x</span></div></div>
 
 
-<div class="viewcode-block" id="PreNorm"><a class="viewcode-back" href="../../vit_flax.html#vit_flax.layers.PreNorm">[docs]</a><span class="k">class</span> <span class="nc">PreNorm</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="PreNorm"><a class="viewcode-back" href="../../source/vit_flax.html#vit_flax.layers.PreNorm">[docs]</a><span class="k">class</span> <span class="nc">PreNorm</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
   <span class="sd">&quot;&quot;&quot;Apply function to a normalized modulue</span>
 <span class="sd">  &quot;&quot;&quot;</span>
-<div class="viewcode-block" id="PreNorm.apply"><a class="viewcode-back" href="../../vit_flax.html#vit_flax.layers.PreNorm.apply">[docs]</a>  <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">norm</span><span class="p">,</span> <span class="n">fn</span><span class="p">):</span>
+<div class="viewcode-block" id="PreNorm.apply"><a class="viewcode-back" href="../../source/vit_flax.html#vit_flax.layers.PreNorm.apply">[docs]</a>  <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">norm</span><span class="p">,</span> <span class="n">fn</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">fn</span><span class="p">(</span><span class="n">norm</span><span class="p">(</span><span class="n">x</span><span class="p">))</span></div></div>
 
 
-<div class="viewcode-block" id="Transformer"><a class="viewcode-back" href="../../vit_flax.html#vit_flax.layers.Transformer">[docs]</a><span class="k">class</span> <span class="nc">Transformer</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="Transformer"><a class="viewcode-back" href="../../source/vit_flax.html#vit_flax.layers.Transformer">[docs]</a><span class="k">class</span> <span class="nc">Transformer</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
   <span class="sd">&quot;&quot;&quot;A simple implementation of a Transformer</span>
 
 <span class="sd">  :param x: Input tensor.</span>
@@ -183,7 +183,7 @@
 
 <span class="sd">  :return: Transformer output embedding</span>
 <span class="sd">  &quot;&quot;&quot;</span>
-<div class="viewcode-block" id="Transformer.apply"><a class="viewcode-back" href="../../vit_flax.html#vit_flax.layers.Transformer.apply">[docs]</a>  <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">num_heads</span><span class="p">,</span> <span class="n">feed_forward_dim_1</span><span class="p">):</span>
+<div class="viewcode-block" id="Transformer.apply"><a class="viewcode-back" href="../../source/vit_flax.html#vit_flax.layers.Transformer.apply">[docs]</a>  <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">num_heads</span><span class="p">,</span> <span class="n">feed_forward_dim_1</span><span class="p">):</span>
     <span class="n">attention</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">SelfAttention</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">num_heads</span><span class="o">=</span><span class="n">num_heads</span><span class="p">)</span>
     <span class="n">norm</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">LayerNorm</span>
     <span class="n">norm_attention</span> <span class="o">=</span> <span class="n">PreNorm</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">,</span> <span class="n">fn</span><span class="o">=</span><span class="n">attention</span><span class="p">)</span>
