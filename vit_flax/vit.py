@@ -5,24 +5,26 @@ from jax import lax
 
 
 class ViT(nn.Module):
-  """Vision transformer
+  """Vision transformer"""
 
-  :param x: Input tensor image
-  :param patch_size: Patch dimension from image
-  :param dim: Latent dim
-  :param depth: Number of layers of Residual-normalized attention layers.
-  :param num_heads: Number of attention heads
-  :param dense_dims: Tuple(int, int) - (Transformer FC dim, Classifier FC dim) 
-  :param img_size: Dimension of input image
-  :param num_classes: Number of classification classes
-  :param initializer: Flax initializer
-
-  :return:Classification output
-  """
   def apply(self, x,
             patch_size, dim, depth, num_heads, dense_dims,
             img_size, num_classes,
             initializer=nn.initializers.normal(stddev=1.0)):
+    """Applies the Vision transformer to input tensor.
+
+    :param x: Input tensor image
+    :param patch_size: Patch dimension from image
+    :param dim: Latent dim
+    :param depth: Number of layers of Residual-normalized attention layers.
+    :param num_heads: Number of attention heads
+    :param dense_dims: Tuple(int, int) - (Transformer FC dim, Classifier FC dim) 
+    :param img_size: Dimension of input image
+    :param num_classes: Number of classification classes
+    :param initializer: Flax initializer
+
+    :return:Classification output
+    """
     b, h, w, c = x.shape
     patch = x.reshape(b, c, h, w)
     num_patches = (img_size // patch_size) ** 2
