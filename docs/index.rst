@@ -10,6 +10,13 @@ Welcome to Vision Transformers in JAX/Flax(ViT-Flax)'s documentation!
    :maxdepth: 2
    :caption: Contents:
 
+.. toctree::
+   :maxdepth: 2
+   :caption: API reference
+
+   vit_flax.layers
+   vit_flax.vit
+
 
 
 Indices and tables

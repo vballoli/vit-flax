@@ -4,3 +4,6 @@ Pygments>=2.6.1
 ipykernel
 nbsphinx
 recommonmark
+jax
+jaxlib
+flax
